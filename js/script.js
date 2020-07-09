@@ -1,18 +1,16 @@
-var email = prompt("Inserisci la tua e-mail") ;
-var lista = ["email@gmail.com", "email1@gmail.com","email2@gmail.com","email3@gmail.com","email4@gmail.com","email5@gmail.com","email6@gmail.com"];
-var trovata = false;
+var giocatore = Math.floor(Math.random()*6)+1;
+var computer = Math.floor(Math.random()*6)+1;
+var vincitore;
 
-for (var i = 0; i < lista.length; i++) {
-  if (lista[i] == email) {
 
-    trovata = true;
-
-  }
-
-}
-
-if ( trovata == true ) {
-  alert("Mail trovata! Accesso consentito");
+if (giocatore > computer) {
+  vincitore =  " " + "Hai vinto!";
+} else if (giocatore == computer) {
+  vincitore =  " " +  "Pareggio!";
 } else {
-  alert("Mail non trovata!")
+  vincitore = " " + "Hai perso!";
 }
+
+document.getElementById("vincitore") .innerHTML = vincitore;
+document.getElementById("tu") .innerHTML = "Tu:" + " " + giocatore;
+document.getElementById("pc") .innerHTML = "Computer:" + " " + computer;
