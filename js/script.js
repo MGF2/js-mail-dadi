@@ -4,11 +4,11 @@ var vincitore;
 
 
 if (giocatore > computer) {
-  vincitore =  " " + "Hai vinto!";
+  vincitore =  "Hai vinto!";
 } else if (giocatore == computer) {
-  vincitore =  " " +  "Pareggio!";
+  vincitore =  "Pareggio!";
 } else {
-  vincitore = " " + "Hai perso!";
+  vincitore =  "Hai perso!";
 }
 
 document.getElementById("vincitore") .innerHTML = vincitore;
